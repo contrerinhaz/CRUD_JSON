@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -115,4 +115,227 @@ footer {
     margin-top: 32px;
     font-size: 14.4px;
     color: #555;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    background-color: #7ec850; /* grass green */
+    color: #2d2d2d;
+    line-height: 1.6;
+    padding: 16px;
+}
+
+header {
+    background-color: #3e7327; /* dark grass */
+    color: white;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    border-radius: 0;
+    border: 4px solid #2c5220;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin-top: 16px;
+    padding-left: 0;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid white;
+    border-radius: 0;
+    background-color: #5a8f3f;
+    display: inline-block;
+}
+
+nav li a:hover {
+    background-color: #3e7327;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+#form {
+    flex: 2;
+    min-width: 300px;
+}
+
+#form section {
+    background-color: #dedede;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 0;
+    border: 3px solid #999;
+    box-shadow: 0 0 0 4px #b3b3b3;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 2px solid #888;
+    border-radius: 0;
+    background-color: #f7f7f7;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 16px;
+    background-color: #6a4e29; /* wood color */
+    color: white;
+    border: 3px solid #3b2c18;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a351f;
+}
+
+#inventory {
+    flex: 1;
+    background-color: #fdfdfd;
+    padding: 16px;
+    border-radius: 0;
+    border: 4px solid #ccc;
+    box-shadow: 0 0 0 4px #b5b5b5;
+    height: fit-content;
+    position: sticky;
+    top: 16px;
+    min-width: 250px;
+}
+
+#inventoryList {
+    list-style: square;
+    padding-left: 16px;
+}
+
+#inventoryList li {
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #aaa;
+    padding-bottom: 4px;
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 12px;
+    color: #222;
+    background-color: #c6c6c6;
+    padding: 12px;
+    border-top: 4px solid #888;
+}
+
+/* 📲 Tablet - 768px o menos */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-left: 0;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li a {
+        display: inline-block;
+        width: auto;
+        min-width: 140px;
+        font-size: 12px;
+        padding: 8px 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 2px solid white;
+        background-color: #5a8f3f;
+    }
+
+    #form section {
+        padding: 12px;
+    }
+
+    input, button {
+        font-size: 12px;
+    }
+
+    #inventory {
+        position: static;
+        top: auto;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* 📱 Móviles - 480px o menos */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    header {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    nav li a {
+        font-size: 11px;
+        padding: 6px 12px;
+        min-width: 120px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    input {
+        font-size: 11px;
+    }
+
+    #inventoryList li {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
