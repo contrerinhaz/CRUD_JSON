@@ -1,101 +1,69 @@
-# Developer
+# Author
 
-Juan David Contreras Coronado (contrerinhaz)
-GitHub Repository: (https://github.com/contrerinhaz/CRUD_JSON.git)
+Juan David Contreras Coronado  
+GitHub: https://github.com/contrerinhaz
 
-# Product Appointment Manager
+# Product Inventory Manager
 
-This project is a simple product manager made with HTML, CSS, and JavaScript.
-It uses json-server to simulate a real API and store data.
-
-------------------------------
+This is a simple web app that lets you add, update, delete, and view products using JSON Server. It's designed for beginners learning how to use JavaScript with RESTful APIs.
 
 ## Features
 
-- Add new product appointments
-- Delete a product by ID
-- Update a product's information
-- Display all products in a list
-- Show a product table in the browser console
+- Add new products (ID, name, category, price)
+- Delete products by ID
+- Update existing product information
+- Display the product inventory
+- Responsive design for tablets and mobile devices
 
-------------------------------
+## Responsive Design
 
-## Folder Structure
+The layout is fully responsive.  
+It adjusts automatically to different screen sizes, including desktops, tablets, and mobile phones.  
+Media queries are used to ensure proper visibility and usability on smaller devices.
+
+## Project Structure
 
 project-folder/
-│
-├── database.json          - Product data (used by json-server)
-├── index.html             - Main web page
-├── README.md              - This file
-└── src/
-    ├── css/
-    │   └── styles.css     - Styles for the page
-    └── js/
-        └── main.js        - JavaScript logic
+|
+├── index.html               Main HTML file
+├── src/
+│   ├── css/
+│   │   └── styles.css       Stylesheet
+│   └── js/
+│       └── main.js          JavaScript logic
+└── db.json                  JSON Server database file (you must create this)
 
-------------------------------
+## Requirements
 
-## How to Start
+- Node.js
+- JSON Server (global installation)
+- A code editor like Visual Studio Code
 
-1. Install json-server (only once)
+## Installation and Usage
 
-Open your terminal and run:
+1. Install JSON Server globally by running:
 
-    npm install -g json-server
+   npm install -g json-server
 
-If you see a permission error, try:
+2. In the root folder of the project, create a file named `db.json` and add this content:
 
-    sudo npm install -g json-server
+   {
+     "appointments": []
+   }
 
-------------------------------
+3. Run JSON Server with the following command in your terminal:
 
-2. Start the json-server
+   json-server --watch db.json --port 3001
 
-Go to the project folder where `database.json` is located and run:
+4. Open the `index.html` file in your browser. You can also use the "Live Server" extension in Visual Studio Code for automatic reload.
 
-    json-server --watch database.json --port 3001
+## Important Notes
 
-This will create an API at:
+- The project uses the endpoint http://localhost:3001/appointments
+- Product IDs must be unique. If an ID already exists, the product will not be added.
+- After adding, updating, or deleting, the product list will refresh automatically.
 
-    http://localhost:3001/appointments
+## License
 
-------------------------------
-
-3. Open the Web App
-
-You can open the file `index.html` in your browser directly,
-or use the Live Server extension in Visual Studio Code.
-
-------------------------------
-
-## How to Use the App
-
-- Add Product:
-  Fill in the ID, Name, Category, and Price.
-  Then click the "Submit" button to add it.
-
-  If the ID already exists, the app will show an alert.
-
-- Delete Product:
-  Type the ID of the product you want to delete, then click "Delete".
-  If the ID exists, it will be removed from the list and the API.
-
-- Update Product:
-  Type the existing ID, then enter the new Name, Category, and Price.
-  All fields are required to update.
-  Click "Update" to save the new data.
-
-- View Inventory:
-  The product list is shown at the bottom of the page.
-  Every time you add, delete or update, the full list is also shown as a table in the browser console.
-
-------------------------------
-
-## Extra Information
-
-- The app connects to: http://localhost:3001/appointments
-- You can change this URL in the `main.js` file if needed.
-
-------------------------------
-
+© 2025 contrerinhaz. All rights reserved.
 
